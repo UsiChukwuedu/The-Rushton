@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;;GAGG;AAGH,UAUC;EATC,WAAW,EAAE,oBAAoB;EACjC,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,GAAG,EAAE,mCAAwC;EAC7C,GAAG,EAAE,ySAI6D;AAGpE;IACK;EACH,WAAW,EAAE,oBAAoB;EACjC,WAAW,EAAE,GAAG",
+"sources": ["fonts/fontawesome-pro-5.0.6/web-fonts-with-css/scss/fa-solid.scss"],
+"names": [],
+"file": "fa-solid.css"
+}

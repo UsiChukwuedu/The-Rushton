@@ -1,0 +1,135 @@
+// ------| THANK YOU | ------ //
+.page-slick {
+    .slick-slide{
+        h2{
+            font-size:36px;
+            color:$black;
+        }
+    }
+}
+
+
+// ------| THANK YOU | ------ //
+.page-thank-you{
+}
+
+// ------| 404 | ------ //
+.error404{
+}
+
+// ------| BLOG - INDEX | ------ //
+.blog, .archive{
+    .categories{
+        text-align:center;
+        ul{
+            list-style:none;
+            display:inline-block;
+            margin-left:0;
+            margin-bottom:0;
+            li{
+                float:left;
+                text-transform:uppercase;
+                margin-right:$text-marg;
+                position:relative;
+                &:after{
+                    content:'';
+                    position:absolute;
+                    background:$keyline-color;
+                    width:1px;
+                    height:14px;
+                    top:1px;
+                    right:-12px;
+                }
+            }
+        }
+    }
+    .col{
+        margin-bottom:$bottom-pad;
+        .inner{
+            border:1px solid $black;
+            display:inline-block;
+            width:100%;
+            @include breakpoint(large up) {
+                border-color:$black;
+                @include transition(border-color 350ms ease);
+                .info {
+                    h3, h6, p, span {
+                        @include transition(color 350ms ease);
+                    }
+                }
+                &:hover{
+                    border-color:$orange;
+                    .info{
+                        h3, h6, p, span{
+                            color:$orange;
+                        }
+                    }
+                }
+            }
+        }
+        .bg{
+            height:240px;
+        }
+        .info{
+            padding:$pad-max;
+            p{
+                margin-bottom:0;
+            }
+            span{
+                text-align:center;
+                display:inline-block;
+                width:100%;
+            }
+            .read-more {
+                margin-top: $text-marg;
+            }
+        }
+    }
+    @include breakpoint(medium down){
+        .col{
+            margin-bottom:$bottom-pad-mob;
+        }
+    }
+    @include breakpoint(small down){
+        .col{
+            max-width:400px;
+            margin-left:auto;
+            margin-right:auto;
+            float:none;
+            margin-bottom:$bottom-pad-mob-small;
+        }
+    }
+}
+
+// ------| BLOG - SINGLE | ------ //
+.single.single-post{
+    .content{
+        .bg {
+            height: 280px;
+        }
+        .header {
+            margin-top: 50px;
+            margin-bottom:32px;
+            text-align:center;
+            span{
+                display:inline-block;
+                width:100%;
+                text-transform:uppercase;
+                font-size:10px;
+            }
+        }
+        .options{
+            margin-top:50px;
+            text-align:center;
+            .share{
+                margin-bottom:24px;
+                h3{
+                    margin-bottom: 6px;
+                }
+                div{
+                    display:inline-block;
+                }
+            }
+        }
+    }
+}

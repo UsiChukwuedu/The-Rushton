@@ -1,0 +1,5 @@
+*.DS_Store
+*.sass-cache/
+*.js_backup
+*.php_backup
+scss/foundation/

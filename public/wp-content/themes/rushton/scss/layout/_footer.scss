@@ -1,0 +1,95 @@
+footer{
+	background:$white;
+	/*height:$footer-height;*/
+	position:relative;
+	span, a, p, div{
+		font-size:10px;
+	}
+	.text-link:before{
+		bottom:-1px;
+	}
+	/*
+	&:after{
+		content:'';
+		position:absolute;
+		width:100%;
+		top:0;
+		left:0;
+		border-top:1px solid $keyline-color;
+	}
+	*/
+	.info{
+		font-size:12px;
+		line-height:1;
+		margin-top:12px;
+		br{
+			display:none;
+		}
+	}
+	.social{
+		position:relative;
+		top:18px;
+		text-align:center;
+		div{
+			display:inline-block;
+		}
+	}
+	.logos{
+		margin-top:18px;
+	}
+	.logo{
+		display:inline-block;
+		svg{
+			width:24px;
+		}
+	}
+	.pipesep{
+		position:relative;
+		margin-right:13px;
+		&:after{
+			content:'';
+			position:absolute;
+			background:$keyline-color;
+			width:1px;
+			height:7px;
+			top:4px;
+			right:-8px;
+		}
+	}
+	@include breakpoint(medium down){
+		/*height:$footer-height-mob;*/
+		.info{
+			margin-top:12px;
+			text-align:center;
+		}
+		.social{
+			position:relative;
+			top:12px;
+			display:none;
+		}
+		.logos{
+			margin-top:12px;
+			text-align:center;
+		}
+	}
+	@include breakpoint(xsmall down){
+		/*height:$footer-height-mob-small;*/
+		.info{
+			br{
+				display:block;
+			}
+			.rend, .comp{
+				margin-right:0;
+				&:after{
+					content:none;
+				}
+			}
+			.cred{
+				width:100%;
+				display:inline-block;
+				margin-top: 12px;
+				margin-bottom: 12px;
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+aside{
+	overflow: hidden;
+	button{
+		position: fixed;
+		background: $orange;
+		right: 50px;
+		display: inline-block;
+		padding: 22px 35px 18px;
+		text-transform: uppercase;
+		z-index: 1;
+		top: -100px;
+		@include transition(all 750ms ease);
+		@include transitionDelay(2000ms);
+		@include boxShadow(0 0 8px 0 rgba(0, 0, 0, 0.05));
+		&.no-delay{
+			@include transitionDelay(0ms);
+		}
+		&.active{
+			top: 20px;
+		}
+		&:hover{
+			background: $peach;
+			@include boxShadow(0 0 8px 0 rgba(0, 0, 0, 0.15));
+			color: $white;
+		}
+		@include breakpoint(medium down){
+			padding: 18px 28px 14px;
+			font-size: 14px;
+		}
+		@include breakpoint(small down){
+			right: 50%;
+			transform: translateX(50%);
+			&.active{
+				top: 0;
+			}
+		}
+	}
+}

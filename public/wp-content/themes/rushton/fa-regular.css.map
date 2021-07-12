@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;;GAGG;AAGH,UAUC;EATC,WAAW,EAAE,oBAAoB;EACjC,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,GAAG,EAAE,qCAA0C;EAC/C,GAAG,EAAE,mTAI+D;AAGtE,IAAK;EACH,WAAW,EAAE,oBAAoB;EACjC,WAAW,EAAE,GAAG",
+"sources": ["fonts/fontawesome-pro-5.0.6/web-fonts-with-css/scss/fa-regular.scss"],
+"names": [],
+"file": "fa-regular.css"
+}

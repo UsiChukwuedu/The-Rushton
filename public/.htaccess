@@ -1,0 +1,29 @@
+RewriteEngine on
+RewriteRule ^robots.txt$     /robots.php [L]
+
+# Block XMLRPC hack attempt that breaks servers by DDOS
+<Files "xmlrpc.php">
+Order Allow,Deny
+deny from all
+</Files>
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /the-rushton/public/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /the-rushton/public/index.php [L]
+</IfModule>
+
+# END WordPress
+
+php_value upload_max_filesize 128M
+php_value post_max_size 128M
+php_value memory_limit 256M
+php_value max_execution_time 300
+php_value max_input_time 300

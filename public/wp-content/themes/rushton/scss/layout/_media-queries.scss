@@ -1,0 +1,35 @@
+/** 
+
+!!! ----- ATTENTION ----- !!! 
+
+We are moving away from traditional media queries.
+
+Instead we prefer using the Foundation breakpoint mixin that can be nested inside of elements.
+
+This greatly inceases efficiency of workflow and organization of the SASS files.
+
+To see exmaples of these in use, look the h1, h2 elements near the top of sitewide.scss
+
+To see or edit the Foundation breakpoints, look inside _settings.scss
+
+**/
+
+/** Tablet Landscape **/
+@media screen and (max-width: 1024px){
+}
+
+/** Tablet Portrait **/
+@media screen and (max-width: 768px){
+}
+
+/** Mobile **/
+@media screen and (max-width: 640px){
+}
+
+/** Mobile **/
+@media screen and (max-width: 480px){
+}
+
+/** iPhone **/
+@media screen and (max-width: 320px){
+}

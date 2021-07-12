@@ -1,0 +1,204 @@
+.clearfix {
+    @include clearfix;
+}
+.bg{
+    background-size:cover;
+    background-position:50% 50%;
+}
+
+.columns{
+    padding-left:$pad-max;
+    padding-right:$pad-max;
+    @include breakpoint(small down){
+        padding-left: $pad-min;
+        padding-right: $pad-min;
+    }
+}
+
+.edgepad{
+     .row {
+        padding-left: $pad-max / 2;
+        padding-right: $pad-max / 2;
+        .columns {
+            padding-left: $pad-max / 2;
+            padding-right: $pad-max / 2;
+        }
+    }
+    @include breakpoint(small down){
+        .row {
+            padding-left: $pad-min / 2;
+            padding-right: $pad-min / 2;
+            .columns {
+                padding-left: $pad-min / 2;
+                padding-right: $pad-min / 2;
+            }
+        }
+    }
+}
+
+.pad-top{
+    padding-top:$pad-max;
+    @include breakpoint(small down) {
+        padding-top: $pad-min;
+        
+    }
+}
+
+.pad-bottom {
+    padding-bottom: $pad-max;
+    @include breakpoint(small down) {
+        padding-bottom: $pad-min;
+    }
+}
+
+.halfpad{
+    padding-left:$pad-max / 2;
+    padding-right:$pad-max / 2;
+}
+
+.nopad{
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+
+.paragraphs{
+    p{
+        &:last-child{
+            margin-bottom:0;
+        }
+    }
+}
+
+.embed-container { 
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    iframe, object, embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%
+    }
+}
+
+.block-button{
+    background: $black;
+    color: $white;
+    border: none;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    display:inline-block;
+    cursor:pointer;
+    @include transition(background 350ms ease, opacity 350ms ease);
+    @include breakpoint(large up) {
+        &:hover {
+            background: $nav-active;
+        }
+    }
+}
+
+.icon-link{
+    color:$black;
+    font-size:14px;
+    display:inline-block;
+    &:not(:last-child){
+        margin-right:14px;
+    }
+    @include breakpoint(large up){
+        @include transition(color 350ms ease);
+        &:hover{
+            color:$nav-active;
+        }
+    }
+}
+
+.text-link{
+    position:relative;
+    display:inline-block;
+    @include breakpoint(large up){
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 1px;
+            left: 0;
+            opacity: 0;
+            @include transition(opacity 350ms ease);
+        }
+        &:hover, {
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+    &.mobile-click{
+        &:before{
+            opacity:1;
+            @include transition(opacity 350ms ease);
+        }
+    }
+    &.white{
+        color:$white;
+        &:before{
+            background:$white;
+        }
+    }
+    &.black{
+        color:$black;
+        &:before{
+            background:$black;
+        }
+    }
+    &.active{
+        color:$nav-active;
+        &:before {
+            background:$nav-active;
+        }
+    }
+}
+
+.nowrap{
+    white-space:nowrap;
+}
+
+.img-center{
+    text-align:center;
+    img{
+        display:inline-block;
+    }
+}
+
+
+// ----- LAZYLOAD.js ----- //
+
+.loading{
+    position:relative;
+    &+.loading-animation{
+        content:'';
+        position:absolute;
+        width:50px;
+        height:50px;
+        border-radius:50%;
+        border:10px solid rgba(0,0,0,0.15);
+        border-top-color:rgba(0,0,0,1);
+        box-sizing:border-box;
+        position:absolute;
+        top:50%;left:50%;
+        margin-top:-25px;
+        margin-left:-25px;
+        animation:loading 600ms linear infinite;
+        -webkit-animation:loading 600ms linear infinite;
+    }
+}
+@keyframes loading{
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+}
+@-webkit-keyframes loading{
+    0%{-webkit-transform:rotate(0deg)}
+    100%{-webkit-transform:rotate(360deg)}
+}

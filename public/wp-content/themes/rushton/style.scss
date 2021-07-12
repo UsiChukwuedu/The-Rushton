@@ -1,0 +1,152 @@
+ /*
+Theme Name: The Townes at Deer Springs
+Description: Custom WordPress Theme for The Townes project from Deer Springs Tottenham.
+Author: 52 Pick-up Inc.
+Author URI: http://52pick-up.com
+Version: 1.0.0
+*/
+
+// FUNCTIONS
+// @function remCalc($pxWidth) {
+//   @return $pxWidth / 16 * 1rem;
+// }
+
+@function remCalc($pxSize) {
+  $remSize: $pxSize / ($pxSize * 0 + 1);
+  @return $remSize / 16 * 1rem;
+}
+
+@function percentCalc($target, $container) {    
+  @return ($target / $container) * 100%;                               
+} 
+
+// FONTS
+
+@font-face {
+  font-family: 'proxima-nova-sbold'; 
+  src: url(fonts/Proxima-Nova/Proxima-Nova-Sbold.otf);
+}                
+
+@font-face {                      
+  font-family: 'proxima-nova-medium';
+	src:url("fonts/Proxima-Nova/Proxima-Nova-medium.otf");                   
+}
+
+@font-face {                      
+  font-family: 'proxima-nova-bold';
+	src:url("fonts/Proxima-Nova/Proxima-Nova-Bold.otf"); 
+}
+
+
+$Proxima-Nova-medium: "proxima-nova-medium", sans-serif;  
+$Proxima-Nova-sbold: "proxima-nova-sbold", sans-serif;                                                                                      
+$Proxima-Nova-bold: "proxima-nova-bold", sans-serif;           
+  
+
+// VARIABLES
+$primary-colour: #2ba6cb; // Foundation colours
+$secondary-colour: #e9e9e9; // Foundation colours
+$alert-colour: #c60f13; // Foundation colours
+$success-colour: #5da423; // Foundation colours
+$header-font-colour: #222; // Foundation colours
+$body-font-colour: #3e3e3e; // Foundation colours
+$light-gray: #e6e6e6;
+$medium-gray: #999999;
+$dark-gray: #8a8a8a;
+$black: #000;
+$white: #fff;
+$red: #FF0000;
+
+$lime: #BBD54A;
+$purple: #A42280;
+$purple-dark: #7c1864;
+$purple-light: #a44e91;
+$peach: #D35158;
+$orange: #F9A224;
+$yellow: #f6a100;
+$green: #197564;     
+    
+$keyline-color: $black;
+$form-border: $purple-light;
+$form-bg: $purple-dark;
+$placeholder: $white;
+$error-bg: $purple-dark;
+$error-border: #f52200;
+$fp-controls: #525252;
+
+$nav-active: $orange;
+$body-background: $white;
+$body-font-color: $black;
+$footer-height: 60px;
+$footer-height-mob: 88px;
+$footer-height-mob-small: 132px;
+$footer-border: 1px;
+$nav-height-mob: 40px;
+$nav-height: 60px;
+$text-marg:24px;
+$top-pad: 50px;
+$top-pad-mob: 24px;
+$bottom-pad: 50px;
+$bottom-pad-mob: 32px;
+$bottom-pad-mob-small: 20px;
+$pad-max: 20px;
+$pad-min: 14px;  
+  
+// MIXINS
+//@import "scss/mixins";
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:              
+----------------------------------------------------------------
+1.0 Foundation
+	1.1 CSS Reset
+	1.2 Foundation Default
+2.0 Global Styles
+	2.1 WordPress Core
+	2.2 Header
+	2.3 Footer
+3.0 Homepage
+4.0 Subpages
+5.0 Animations
+6.0 Media Queries
+7.0 Slick
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 FOUNDATION
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.1 CSS RESET
+--------------------------------------------------------------*/
+//@import "scss/normalize";
+
+/*--------------------------------------------------------------
+1.2 FOUNDATION DEFAULT
+--------------------------------------------------------------*/
+@import "scss/settings";
+@import "scss/foundation";
+@include foundation-everything;         
+
+/*--------------------------------------------------------------
+2.0 GLOBAL STYLES
+--------------------------------------------------------------*/
+@import "scss/wp-core";
+@import "scss/helpers/helpers";               
+@import "scss/pages/index";                                                                  
+@import "scss/layout/layout";          
+                                                  
+/*--------------------------------------------------------------
+7.0 FULLPAGE
+--------------------------------------------------------------*/
+// @import "scss/fullpage";
+
+/*--------------------------------------------------------------
+8.0 ANIMATIONS
+--------------------------------------------------------------*/
+// @import "scss/animations";
+
+/*--------------------------------------------------------------
+9.0 MEDIA QUERIES
+--------------------------------------------------------------*/
+// @import "scss/media-queries";
+
